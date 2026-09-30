@@ -6,8 +6,8 @@ Project website for Universal Textual Teaching (UTT).
 
 Website: https://alexlu99.github.io/UTT-Webpage/
 
-This repository contains the static project website, paper figures, PDF,
-and full text Primer examples. The research code repository and arXiv link
+This repository contains the static project website, paper figures,
+and full text Primer examples, including MathVerse multimodal results. The research code repository and arXiv link
 will be added when available.
 
 Edit `index.html`, `styles.css`, and `app.js` to update the page.
