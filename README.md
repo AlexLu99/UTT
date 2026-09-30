@@ -2,9 +2,9 @@
 
 Project website for Universal Textual Teaching (UTT).
 
-**Zhanyi Lu and Huan Wang* — Westlake University**
+**Zhanyi Lu and Huan Wang**<sup>*</sup> — Westlake University
 
-*Corresponding author: [wanghuan@westlake.edu.cn](mailto:wanghuan@westlake.edu.cn)
+<sup>*</sup> Corresponding author: [wanghuan@westlake.edu.cn](mailto:wanghuan@westlake.edu.cn)
 
 [ENCODE Lab](https://westlake-encode-lab.github.io/)
 
