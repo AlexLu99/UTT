@@ -1,0 +1,109 @@
+Primer: Olympiad Problem-Solving Patterns
+
+0 Output discipline
+
+- End with a finite checkable proof/boxed answer; prefer compact algebra, counting, or graph arguments.
+
+- Verify definitions, boundary cases, and small examples before trusting analogies or known results.
+
+1 Geometry
+
+- Circle tangency via coordinates: normalize; circle through points \(x^2+y^2+ax+by+c=0\); prove common point and proportional gradients.
+
+- Billiards by unfolding: reflect polygon, not ray; path becomes straight segment in tiling; use gcd/color conditions for vertex hits.
+
+- Distinguish metric vs combinatorial definitions; use explicit polar/nonregular counterexamples.
+
+- Tetrahedron altitude from six edges: build base \(B'C'D'\); build rotated face points \(A_B\) opposite side of \(C'D'\) with \(A_BC'=AC, A_BD'=AD\), and \(A_C\) opposite side of \(B'D'\) with \(A_CB'=AB, A_CD'=AD\). Perpendiculars from \(A_B\) to line \(C'D'\) and \(A_C\) to line \(B'D'\) meet at the true foot \(X'\). Altitude \(=\sqrt{|A_BY'|^2-|X'Y'|^2}\), constructible by Pythagorean difference. Use full supporting lines, not segments. Foot from \(A\) to line \(BC\) has signed \(BP=(AB^2+BC^2-AC^2)/(2BC)\); \(BP<0\) or \(BP>BC\) means foot outside segment. Transfer signed positions; unsigned distances fail in obtuse cases.
+
+2 Number theory and polynomial values
+
+2.1 Vieta jumping/descent
+
+For \((a+b)(a+b+1)/(ab)=N\): fix \(N\), rewrite as quadratic, Vieta gives positive integer other root; descend to equal pair; verify integrality/positivity.
+
+2.2 Lyndon words and fractional parts
+
+Suffix/prefix lex conditions become Lyndon words; count length \(L\) over \(q\) by \(\frac1L\sum_{d\mid L}\mu(d)q^{L/d}\).
+
+2.3 Reduced denominators / averaging
+
+For \(S_n=A_n/n!\), denominator \(n!/\gcd(A_n,n!)\); lifts \(A_{r+p^k}\equiv A_r-p^k\pmod{p^{k+1}}\); existence via averaging and Stirling.
+
+2.4 Sum-of-\(k\)-others and omitted elements
+
+If each element is a sum of \(k\) others in a set of \(k+m\), count omitted elements; compare largest/smallest omitted sums. Don't use sign-count bounds: largest need not be positive sum. For zero-sum symmetric sets solve \(a+b+c=-2x\).
+
+2.5 Digit sums and carries
+
+\(\sigma(10m+i)=\sigma(m)+i\); safe block iff \(\sigma(m)\equiv1\pmod{11}\); trailing-9s give \(\sigma(m+1)-\sigma(m)=1-9t\). Maximal safe intervals shape \(9+10+10+9\).
+
+2.6 Integer-valued polynomials and \(P(i)\)
+
+- Integer-valued iff \(P(x)=\sum c_k\binom{x}{k}\), \(c_k\in\mathbb Z\).
+
+- At \(x=i\), analyze \(v_\pi(\binom{i}{k})=v_\pi(N_k/k!)\). For \(p\equiv1\pmod4\), \(p=\pi\bar\pi\) in \(\mathbb Z[i]\); Hensel gives \(s\) with \(\pi^e\mid i-s\), so among \(i,\dots,i-k+1\) at least \(\lfloor k/p^e\rfloor\) are divisible by \(\pi^e\); hence no \(p\equiv1\pmod4\) appears in denominators.
+
+- \(p=2\) or \(p\equiv3\pmod4\) attainable: \(1/2=6\binom{x}{4}+3\); \(1/p=(p-1)!\binom{x}{p}\).
+
+- Answer: \(a+bi\), \(a,b\in\mathbb Q\), with \(\nu_p(a),\nu_p(b)\ge0\) for every \(p\equiv1\pmod4\). Not all \(\mathbb Q(i)\): \(1/5\) excluded.
+
+2.7 Prime-divisor constraints \(\omega(n)>K\)
+
+- Strict \(>K\) means minimal \(\omega(n)=K+1\); constants \(c\) need \(c>0\), \(\omega(c)\le K+1\). Boundary \(\omega(c)=K+2\) with \(\omega(n)=K+1\).
+
+- Monomials \(x^m\) work.
+
+- Nonconstant nonmonomials fail. If \(P(0)\ne0\), Schur gives \(K+2\) primes \(q_i\) with nonzero roots \(a_i\bmod q_i\); CRT+Dirichlet builds \(n\) with exactly \(K+1\) prime factors and \(n\equiv a_i\bmod q_i\); then \(q_i\mid P(n)\), \(q_i\nmid n\), so \(\omega(P(n))\ge K+2\) or \(P(n)\le0\). If \(P(0)=0\), factor \(x^mQ(x)\), \(Q(0)\ne0\), apply to \(Q\); handle constant factor \(c>1\).
+
+3 Scheduling and exact-degree constructions
+
+- Tournament stays: interval per player; pairwise intersection + Helly gives common day; one match at central day; total cost baseline \(2M\) plus idle player-days; balance distinct players before/after.
+
+- Touch/degree: for \(n\) objects each touching exactly 3 others, handshake gives \(3n\) even, so \(n\) even; do not infer divisibility by 4. For large even \(n\), cycle base (outside squares on \(4m\)-gon plus reflected pairs gives \(6m\)) and insert four-square gadgets at cuts to add 8 or 16, covering residues mod 6; verify no unintended intersections.
+
+4 Hamiltonian paths on grids
+
+- Numbering an \(n\times n\) grid is a Hamiltonian path; diagonal projection gives a \(\pm1\)-walk, main diagonal visits same parity. Bound first/last visits using side color counts; construct explicitly.
+
+5 Permutation reachability via swap graphs
+
+- Allowed swaps = graph edges; connected graph iff every permutation reachable. Prove connectivity by explicit spanning path; disprove by separated component.
+
+6 Local block constraints and two-stage counting
+
+- Count distinguished positions first, then assign remaining; encode as \(0,\pm1\). For \(2\times2\) zero-sum blocks, general solution \(a_{ij}=(-1)^{i+j}(r_i+c_j)\); propagate sign choices across overlaps.
+
+7 Hyperplane-generic finite sets
+
+- Minimal \(k\)-generic sets: lower via concurrent lines with \(k\) points; upper via private-point subcover and affine linear functions; incidence/basis gives \(|M|\le kn\) for \(k,n>1\).
+
+8 Partition minima and smoothing
+
+- Define \(S(N)=\min_{n_1+\cdots+n_m=N}\sum f(n_i)\) for nonincreasing \(f\). Balanced partition is only an upper bound: \(S(N)\le r f(q+1)+(m-r)f(q)\), \(N=mq+r\), \(0\le r<m\). Summing one fixed partition family overcounts because \(S\) is the minimum over all partitions. Count all zero parts: for \(m=20\), \(N=0,\dots,19\), coefficient of \(f(0)\) is \(20+\cdots+1=210\), not 20.
+
+- Smoothing extremal: if \(\sum f(i)=A=\binom{a+1}{2}\), then \(\sum_{N\ge0}S(N)\le \sum_{N=0}^{ma}(ma-N)=ma(ma+1)/2\). Equality at \(f(i)=\max(a-i,0)\), \(g(N)=\max(ma-N,0)\). Verify: \(f(n_i)\ge a-n_i\), so sum \(\ge ma-N\), and sum \(\ge0\).
+
+9 Fair bounded selection with biased coins
+
+- Do not assume arbitrary outcome probabilities can be partitioned into \(n\) equal groups. For \(n=3\), \(p=1/3\), \(L=3\), weights \(8,4,4,4,2,2,2,1\) cannot split into three sums 9 (8 must pair with 1; remaining even weights cannot sum 9).
+
+- Verified construction: choose \(p_1=1/n\), \(p_2=1/2\); take \(c\) with \(N=2^c\ge n(n-1)\), announce \(L=c+1\). Toss coin1 once, coin2 \(c\) times. In units \(1/(nN)\), there are \(N\) \(T\)-outcomes of weight \(n-1\) and \(N\) \(H\)-outcomes of weight 1; each person needs total weight \(N\). Write \(N=qn+r\), \(0\le r<n\); set \(a_i=q+1\) for \(r\) people, \(a_i=q\) otherwise; \(b_i=N-a_i(n-1)\). Feasibility \(a_i(n-1)\le N\) follows from \(N\ge n(n-1)\). Assign \(a_i\) \(T\)-strings and \(b_i\) \(H\)-strings to person \(i\); probability \(a_i(n-1)/(nN)+b_i/(nN)=1/n\). Explicitly verify the partition before announcing.
+
+10 Validation checklist
+
+- Integer-valued polynomials: binomial basis; check split primes \(p\equiv1\pmod4\) separately.
+
+- \(\omega(n)>K\): convert to \(K+1\); constants separately; Schur+CRT/Dirichlet to force prime divisors.
+
+- Touch/degree: handshake parity; avoid extra divisibility; test constructions for unintended coincidences.
+
+- Scheduling/grid/digit/local-counting: include idle days; diagonal parity and explicit attainment; carry blocks; propagate overlap consistency.
+
+- Vieta jumping: verify positive integral new root. Circle tangency: check membership and gradients. Counting formulas: check divisors/Möbius signs.
+
+- Tetrahedron altitude: use supporting lines and signed foot distances; test obtuse cases (\(BP<0\) or \(BP>BC\)); verify intersection is true projection.
+
+- Partition minima: balanced partition is upper bound not exact; count zero coefficients; verify extremal construction.
+
+- Fair selection: verify explicit equiprobable partition for announced bound; test small \(n\)/parity counterexamples.

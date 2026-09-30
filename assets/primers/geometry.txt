@@ -1,0 +1,71 @@
+PRIMER: Multiple-Choice Geometry from a Figure
+
+0. Non-negotiable output rule
+
+One letter is the deliverable. Write "Answer: X" first (or end with the bare letter on its own line), then 2–6 lines of justification. Nearly every observed failure was identical: no final output — budget burned re-reading the figure, cataloguing every labeled value, or debating which vertex owns a number. Partial reasoning scores zero; a best guess always beats silence.
+
+Budget policy: 2–4 reasoning steps, at most one or two figure interpretations, then stop.
+
+- Value matches an option \(\rightarrow\) commit; stop verifying.
+
+- Matches nothing \(\rightarrow\) say so in one sentence, switch the assignment once, else pick the nearest listed value.
+
+- Never solve for every lettered unknown; stop the instant the target is pinned.
+
+- "Cannot be determined" only after a determinate chain visibly breaks — never as a hedge.
+
+1. Read the figure, then isolate one unknown
+
+- Attach each number to the vertex/side/bracket its mark touches; name it ("\(\angle MLJ=30^\circ\)"). An arrow from a value just labels the adjacent lettered angle (\(r^\circ\leftarrow90\) means \(r=90\)).
+
+- Decide what each length denotes: radius vs diameter, whole bracket vs sub-segment, side vs apothem, slant vs height. Label-swapping is the #1 distractor generator. An arrow drawn inside a small circle from its center is that circle's radius.
+
+- List only the structural facts you need: which point-triples are collinear, which segments are parallel/tangent.
+
+- Chain, don't systematize: anchor on the triangle/relation with two knowns, propagate, stop.
+
+- Prune decoys explicitly; extra labels often serve other sub-questions.
+
+- Not-to-scale figures: test candidate readings against options; keep the clean one.
+
+2. Angle propagation toolkit
+
+Two tools carry most crossing-line figures: vertical angles at the intersection and \(180^\circ\) sums (triangle, straight angle). Template: triangle with two given angles \(\rightarrow\) third angle \(\rightarrow\) vertical angle across \(\rightarrow\) next triangle \(\rightarrow\) straight-angle subtraction \(\rightarrow\) target.
+
+Parallel lines: arrowheads declare the parallel pair; find the transversal joining target to given. Corresponding/alternate interior \(\Rightarrow\) equal; co-interior or linear pair \(\Rightarrow\) supplementary. Misreading same-side as alternate gives the \(180-\theta\) distractor. Extended ray \(\Rightarrow\) linear pair. In a parallelogram a diagonal is a transversal for both side pairs; pair the correct halves. Quadrilateral interior sum \(360^\circ\).
+
+3. Congruent/joined figures
+
+Congruent polygons glued along a shared side: corresponding angles transfer; the angle at a seam vertex is usually the sum of one angle from each. Validate with polygon angle sums.
+
+4. Similar triangles (parallels, shadows, mirrors)
+
+\(AB\parallel CD\) with apex \(P\) \(\Rightarrow\triangle PAB\sim\triangle PCD\); \(h(P\rightarrow AB)=(AB/CD)\cdot h(P\rightarrow CD)\). Distance between parallels \(=h_{\mathrm{total}}-h_{\mathrm{sub}}\) (must be \(<\) total). Mirror/shadow: \(h_{\mathrm{far}}/h_{\mathrm{near}} =d_{\mathrm{far}}/d_{\mathrm{near}}\).
+
+5. Circle toolkit
+
+- Find diameters first: collinear labeled points through the center \(\Rightarrow\) adjacent central angles are a linear pair; all central angles sum 360.
+
+- Arc notation: two letters = minor arc = central angle; three letters = arc through the middle letter, usually major \(\Rightarrow360-\mathrm{minor}\) (\(>180^\circ\)).
+
+- Inscribed = \(\frac12\) arc; central = \(2\times\)inscribed; cyclic quad opposite angles supplementary; chord = \(2R\sin A\).
+
+- Tangent from external \(P\): tangent \(\perp\) radius; \(AP=OP\cdot\sin\angle AOP\), \(r=OP\cdot\cos\angle AOP\); check \(r<OP\).
+
+- Equidistant chords \(\Rightarrow\) congruent chords \(\Rightarrow\) congruent arcs \(\Rightarrow\) equal inscribed angles.
+
+- Internally tangent circles: centers and contact point are collinear. Two equal circles of radius \(r\) internally tangent to a big circle at opposite ends of a diameter and tangent to each other \(\Rightarrow R=2r\).
+
+- Perimeter of a curvilinear region = sum of arc lengths, each \((\theta/360)\cdot2\pi\rho\) with its own radius. Half of a circle of radius \(\rho\) contributes \(\pi\rho\). Typical shaded lune: \(\pi R+\pi r+\pi r\). Rectangle on a semicircle diameter: \(h=\sqrt{R^2-(w/2)^2}\).
+
+6. Area by symmetry and cancellation
+
+Shaded = whole \(-\) unshaded; hunt equal-area pieces first. Common apex \(\Rightarrow\) compare triangles by base alone: apex at a rectangle's center gives every top/bottom triangle height \(H/2\), area \(bH/4\), so group bases until they sum to a full side (top set = bottom set = \(\frac14\) of area; sides = \(\frac12\)). If a shaded base and its mirror unshaded base are equal, shaded bases total one full width \(\Rightarrow\frac14\) of the rectangle. Verify all region fractions sum to 1. Assume convenient dimensions (\(4\times2\)) or coordinates. Quarter disc radius \(r\) and semicircle on its chord both have area \(\pi r^2/4\) \(\Rightarrow\) shaded = \(\frac12r^2\); \(\pi\)-free answers signal cancellation.
+
+7. Cone/net toolkit
+
+\((\theta/360)\cdot2\pi R=2\pi r\); \(\theta=90^\circ\Rightarrow R=4r\). Lateral surface = \(\pi rl\); \(l^2=h^2+r^2\). \(AE=AF\), \(DE=DF\Rightarrow\) axis \(\perp\) base.
+
+8. One-line validation, then emit
+
+Supplements sum 180; polygon sums close; drawn obtuse \(\Rightarrow>90^\circ\); chord \(\leq\) diameter; \(r<\) distance to external point; fractions sum to 1; magnitude plausible against options. Name the licensing relation per step. Then emit the letter.
