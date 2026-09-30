@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#174ac7">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23174ac7'/%3E%3Cpath d='M7 9h7v15H7zM18 9h7v15h-7z' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M10 13h2m-2 4h2m9-4h2m-2 4h2' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=6">
 
   <link rel="stylesheet" href="assets/katex/katex.min.css">
 </head>
@@ -18,9 +18,10 @@
 <section class="publication-header" id="top"><div class="container">
 <h1>Universal Textual Teaching<br>for LLMs</h1>
 
-<p class="authors"><span>Zhanyi Lu</span><sup>1</sup><span class="comma">,</span> <span>Huan Wang</span><sup>1</sup></p>
+<p class="authors"><span>Zhanyi Lu</span><sup>1</sup><span class="comma">,</span> <a href="https://huanwang.tech/" target="_blank" rel="noopener">Huan Wang</a><sup>1,*</sup></p>
 <p class="affiliations"><sup>1</sup>Westlake University</p>
-<div class="institution-logos"><img src="assets/westlake.png" width="100" height="100" alt="Westlake University"></div>
+<p class="corresponding-author"><sup>*</sup> Corresponding author: <a href="mailto:wanghuan@westlake.edu.cn">wanghuan@westlake.edu.cn</a></p>
+<div class="institution-logos"><img src="assets/westlake.png" width="100" height="100" alt="Westlake University"><a href="https://westlake-encode-lab.github.io/" target="_blank" rel="noopener" aria-label="ENCODE Lab website"><img class="encode-logo" src="assets/encode-lab.jpg" width="900" height="234" alt="ENCODE Lab — Efficient Neural Computing and Design"></a></div>
 <div class="publication-links"><span class="resource-pending"><span class="resource-button disabled"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5 2 10l5 5M13 5l5 5-5 5M11 3 9 17"/></svg>Code</span><small>Coming soon</small></span><span class="resource-pending"><span class="resource-button disabled"><span class="arxiv-icon" aria-hidden="true">aχ</span>arXiv</span><small>Coming soon</small></span></div>
 </div></section><section class="teaser"><div class="container"><figure><a class="figure-link" href="assets/teaser.webp" target="_blank" rel="noopener" aria-label="Open teaser figure at full resolution"><img src="assets/teaser.webp" width="2400" height="1090" alt="UTT distills multi-role teaching interactions into a textual Primer. Task-specific Primers transfer to Qwen3.6-27B, yielding gains up to 41.8 percentage points on KernelBench and 31.5 on Omni-MATH-2." loading="lazy"></a><figcaption><strong>Universal Textual Teaching (UTT)</strong> distills an LLM’s knowledge into a textual <em>Primer</em> through multi-role interactions. The Primer improves its source Student and transfers to other Students without resynthesis. When Qwen3.6-27B does not participate in synthesis, accuracy gains reach <strong>41.8</strong> and <strong>31.5 percentage points</strong> on KernelBench and Omni-MATH-2, respectively.</figcaption></figure></div></section>
 <section class="section light" id="abstract"><div class="container"><div class="narrow"><h2>Abstract</h2><div class="abstract-text">
