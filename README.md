@@ -8,7 +8,7 @@ Project website for Universal Textual Teaching (UTT).
 
 [ENCODE Lab](https://westlake-encode-lab.github.io/)
 
-Website: https://alexlu99.github.io/UTT-Webpage/
+Website: https://alexlu99.github.io/UTT/
 
 This repository contains the static project website, paper figures,
 and full text Primer examples, including MathVerse multimodal results. The research code repository and arXiv link
