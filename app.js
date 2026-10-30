@@ -23,7 +23,7 @@ document.getElementById('copy-citation').addEventListener('click', async event =
   try {
     await navigator.clipboard.writeText(document.getElementById('bibtex').textContent);
     button.textContent = 'Copied';
-    document.getElementById('copy-status').textContent = 'BibTeX copied. The arXiv record will be linked when available.';
+    document.getElementById('copy-status').textContent = 'BibTeX copied.';
     setTimeout(() => { button.textContent = 'Copy'; }, 2200);
   } catch {
     const range = document.createRange(); range.selectNodeContents(document.getElementById('bibtex'));

@@ -2,7 +2,7 @@
 
 Project website for Universal Textual Teaching (UTT).
 
-**Zhanyi Lu and Huan Wang**<sup>*</sup> — Westlake University
+**[Zhanyi Lu](https://alexlu99.github.io/) and Huan Wang**<sup>*</sup> — Westlake University
 
 <sup>*</sup> Corresponding author: [wanghuan@westlake.edu.cn](mailto:wanghuan@westlake.edu.cn)
 
@@ -10,8 +10,10 @@ Project website for Universal Textual Teaching (UTT).
 
 Website: https://alexlu99.github.io/UTT/
 
+Paper: [arXiv:2610.12114](https://arxiv.org/abs/2610.12114)
+
 This repository contains the static project website, paper figures,
-and full text Primer examples, including MathVerse multimodal results. The research code repository and arXiv link
+and full text Primer examples, including MathVerse multimodal results. The research code repository
 will be added when available.
 
 Edit `index.html`, `styles.css`, and `app.js` to update the page.
